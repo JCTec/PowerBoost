@@ -16,7 +16,7 @@ class CreatePartidasTable extends Migration
         Schema::create('partidas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('startedAt');
-            $table->string('finishedAt');
+            $table->string('finishedAt')->nullable();
         });
     }
 
