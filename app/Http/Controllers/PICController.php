@@ -10,11 +10,9 @@ class PICController extends Controller
 {
     public function postTweet($player){
 
-        $post = Post::first();
+        $post = Post::orderBy('id', 'desc')->first();
 
         $text = $post->message;
-
-        return $player;
 
         if($player == 1){
             str_replace('POWERBOOST', $post->player1, $text);
