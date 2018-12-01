@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
-use Thujohn\Twitter\Twitter;
+use Thujohn\Twitter\Facades\Twitter;
 
 class PICController extends Controller
 {
