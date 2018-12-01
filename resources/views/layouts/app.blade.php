@@ -23,8 +23,10 @@
         .settings {
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+
+        .settingsI {
             border-radius: 25px;
-            height: 50px;
         }
     </style>
 </head>
