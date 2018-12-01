@@ -24,10 +24,6 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-
-        .settingsI {
-            border-radius: 25px;
-        }
     </style>
 </head>
 <body>
