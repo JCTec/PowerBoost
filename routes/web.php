@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/addPost', 'HomeController@addPost')->name('addPost');
 
 Route::get('/postTweet/{player}', 'PICController@postTweet')->name('postTweet');
+Route::get('/start', 'PICController@start')->name('start');
 
 Route::get('/redirect', 'SocialAuthTwitterController@redirect');
 Route::get('/callback', 'SocialAuthTwitterController@callback');
