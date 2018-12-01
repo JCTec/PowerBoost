@@ -23,10 +23,12 @@ class HomeController extends Controller
 
         if($user && request()->has('message')){
 
-            $post = Post();
+            $post = new Post();
 
             $post->count = 0;
             $post->message = request()->get('message');
+
+            $post->save();
 
             return redirect()->back()->with(['status' => 'Success']);
 
