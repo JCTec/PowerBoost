@@ -18,11 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/addPost', 'HomeController@addPost')->name('addPost');
 
 Route::get('/redirect', 'SocialAuthTwitterController@redirect');
 Route::get('/callback', 'SocialAuthTwitterController@callback');
 
-Route::get('/enviar_tweet', function()
-{
-    return Twitter::postTweet(['status' => 'Mi primer tweet desde Laravel', 'format' => 'json']);
-});

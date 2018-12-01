@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -14,6 +16,21 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function addPost(){
+        $user = Auth::user();
+
+        if($user && request()->has('message')){
+
+            $post = Post();
+
+            $post->count = 0;
+            $post->message = request()->get('message');
+
+            return redirect()->back()->with(['status' => 'Success']);
+
+        }
     }
 
     /**
