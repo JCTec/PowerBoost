@@ -15,15 +15,15 @@ class PICController extends Controller
         $text = $post->message;
 
         if($player == 1){
-            str_replace('POWERBOOST', $post->player1, $text);
+            $text = str_replace('POWERBOOST', $post->player1, $text);
         }else if ($player == 2){
-            str_replace('POWERBOOST', $post->player2, $text);
+            $text = str_replace('POWERBOOST', $post->player2, $text);
 
         }else if ($player == 3){
-            str_replace('POWERBOOST', $post->player3, $text);
+            $text = str_replace('POWERBOOST', $post->player3, $text);
 
         }else if ($player == 4){
-            str_replace('POWERBOOST', $post->player4, $text);
+            $text = str_replace('POWERBOOST', $post->player4, $text);
 
         }else{
             return "Error";
