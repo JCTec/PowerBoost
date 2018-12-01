@@ -7,11 +7,26 @@ use Illuminate\Http\Request;
 
 class PICController extends Controller
 {
-    public function postTweet(){
+    public function postTweet($player){
 
         $post = Post::first();
 
-        str_replace('A', request()->get('A'), $post);
+        $text = $post->message;
+
+        if($player == 1){
+            str_replace('Ä', $post->player1, $text);
+        }else if ($player == 2){
+            str_replace('Ä', $post->player2, $text);
+
+        }else if ($player == 3){
+            str_replace('Ä', $post->player3, $text);
+
+        }else if ($player == 4){
+            str_replace('Ä', $post->player4, $text);
+
+        }else{
+            return "Error";
+        }
 
         $post->count += 1;
 

@@ -46,6 +46,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home')->with(['post' => Post::first()]);
+        return view('home')->with(['post' => Post::orderBy('id', 'desc')->first()]);
     }
 }
