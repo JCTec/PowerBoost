@@ -18,6 +18,15 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        .settings {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 25px;
+            height: 50px;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
