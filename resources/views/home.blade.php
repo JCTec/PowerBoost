@@ -8,7 +8,7 @@
                 <div class="card-header">Ajustes</div>
 
                 <div class="card-body">
-                    <form class="form-inline" method="GET" action="{{ route('addPost') }}">
+                    <form method="GET" action="{{ route('addPost') }}">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -17,7 +17,31 @@
 
                         <div class="row">
                             <div class="col">
-                                <input type="text" id="message" name="message" required style="width: 100%">
+                                <input type="text" id="message" name="message" required placeholder="Tweet" style="width: 100%">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" id="player1" name="player1" required placeholder="Jugador 1" style="width: 100%">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" id="player2" name="player2" required placeholder="Jugador 2" style="width: 100%">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" id="player3" name="player3" required placeholder="Jugador 3" style="width: 100%">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" id="player4" name="player4" required placeholder="Jugador 4" style="width: 100%">
                             </div>
                         </div>
 

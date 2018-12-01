@@ -21,12 +21,16 @@ class HomeController extends Controller
     public function addPost(){
         $user = Auth::user();
 
-        if($user && request()->has('message')){
+        if($user && request()->has('message') && request()->has('player1') && request()->has('player2') && request()->has('player3') && request()->has('player4')){
 
             $post = new Post();
 
             $post->count = 0;
             $post->message = request()->get('message');
+            $post->player1 = request()->get('player1');
+            $post->player2 = request()->get('player2');
+            $post->player3 = request()->get('player3');
+            $post->player4 = request()->get('player4');
 
             $post->save();
 
