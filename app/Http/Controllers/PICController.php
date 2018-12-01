@@ -33,6 +33,6 @@ class PICController extends Controller
 
         $post->save();
 
-        return Twitter::postTweet(['status' => $post, 'format' => 'json']);
+        return Twitter::postTweet(['status' => $text, 'format' => 'json']);
     }
 }
