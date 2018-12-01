@@ -14,16 +14,18 @@ class PICController extends Controller
 
         $text = $post->message;
 
+        return $player;
+
         if($player == 1){
-            str_replace('Ä', $post->player1, $text);
+            str_replace('POWERBOOST', $post->player1, $text);
         }else if ($player == 2){
-            str_replace('Ä', $post->player2, $text);
+            str_replace('POWERBOOST', $post->player2, $text);
 
         }else if ($player == 3){
-            str_replace('Ä', $post->player3, $text);
+            str_replace('POWERBOOST', $post->player3, $text);
 
         }else if ($player == 4){
-            str_replace('Ä', $post->player4, $text);
+            str_replace('POWERBOOST', $post->player4, $text);
 
         }else{
             return "Error";
